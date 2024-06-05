@@ -1,0 +1,15 @@
+.card.active{
+    @apply border-l-4 border-t-0 border-r-0 border-b-0 border-texto-200;
+}
+.menu.menuActivo{
+    @apply   bg-red-50 absolute top-0 left-0 z-40 flex flex-col h-screen w-full px-20 py-20  ;
+    ul{
+        @apply flex flex-col;
+    }
+    .buttons {
+        @apply flex flex-col mt-10;
+        button{
+            @apply w-full;
+        }
+    }
+}

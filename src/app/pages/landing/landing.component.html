@@ -1,0 +1,571 @@
+<header class=" h-24 text-texto-900 flex items-center lg:px-40 px-10 justify-between bg-white">
+        <div class="lgo text-2xl font-bold">
+            Doormat
+        </div>
+        <button (click)="toggleMenu()" class=" cursor-pointer lg:hidden block z-50">
+            @if (activeMenu) {
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#182842" d="m12 13.4l-2.917 2.925q-.277.275-.704.275t-.704-.275q-.275-.275-.275-.7t.275-.7L10.6 12L7.675 9.108Q7.4 8.831 7.4 8.404t.275-.704q.275-.275.7-.275t.7.275L12 10.625L14.892 7.7q.277-.275.704-.275t.704.275q.3.3.3.713t-.3.687L13.375 12l2.925 2.917q.275.277.275.704t-.275.704q-.3.3-.712.3t-.688-.3z"/></svg>
+            }@else {
+
+                <svg  xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#182842" d="M4 18q-.425 0-.712-.288T3 17t.288-.712T4 16h16q.425 0 .713.288T21 17t-.288.713T20 18zm0-5q-.425 0-.712-.288T3 12t.288-.712T4 11h16q.425 0 .713.288T21 12t-.288.713T20 13zm0-5q-.425 0-.712-.288T3 7t.288-.712T4 6h16q.425 0 .713.288T21 7t-.288.713T20 8z"/></svg>
+            }
+        </button>
+        
+        <div [ngClass]="{'menuActivo':activeMenu}"  class=" menu hidden  text-primary-900   bg-white z-30 ">
+         
+         <ul class="  gap-10 flex">
+             <li>Serivces</li>
+             <li>Pricing</li>
+             <li>Resources</li>
+             <li>Company</li>
+             <li>Parteners</li>
+         </ul>
+         <div   class=" buttons flex gap-4 items-center">
+             <button class=" border-none outline-none" [routerLink]="'login'" >Login</button>
+             <button class=" bg-texto-100 text-white font-medium px-4 py-2 rounded-xl">Get Started</button>
+         </div>
+        </div>
+        
+    <ul class="   hidden gap-10 lg:flex">
+        <li>Serivces</li>
+        <li>Pricing</li>
+        <li>Resources</li>
+        <li>Company</li>
+        <li>Parteners</li>
+    </ul>
+    <div   class="  lg:flex hidden gap-4 items-center">
+        <button class=" border-none outline-none">Login</button>
+        <button class=" bg-texto-100 text-white font-medium px-4 py-2 rounded-xl">Get Started</button>
+    </div>
+</header>
+
+<main class=" grid  grid-cols-1 lg:h-[90vh] lg:grid-cols-2">
+        <div class="flex flex-col text-texto-900 bg-primary-100 p-10 lg:p-20">
+            <h1 class=" text-4xl font-bold text-wrap pb-4">Ontario's real estate lawyer</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, ducimus, modi aliquid cupiditate, nihil sunt est quidem accusantium reprehenderit adipisci eaque ullam autem quis nemo repellendus maiores delectus sequi praesentium.</p>
+            <div class="flex pt-5 pb-10 gap-3">
+                <button class=" border-none rounded-xl text-white bg-texto-100 px-4 py-1">Get Sarted</button>
+                <button class=" border-2 border-texto-900 px-4 py-1 rounded-xl bg-white text-texto-900">Get Sarted</button>
+            </div>
+            <div class="flex flex-col gap-2">
+                <div class="flex gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 13.8l-2.15-2.15q-.275-.275-.7-.275t-.7.275t-.275.7t.275.7L9.9 15.9q.3.3.7.3t.7-.3l5.65-5.65q.275-.275.275-.7t-.275-.7t-.7-.275t-.7.275zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/></svg>
+                    Expery real sta lawyes
+                </div>
+                <div class="flex gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 13.8l-2.15-2.15q-.275-.275-.7-.275t-.7.275t-.275.7t.275.7L9.9 15.9q.3.3.7.3t.7-.3l5.65-5.65q.275-.275.275-.7t-.275-.7t-.7-.275t-.7.275zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/></svg>
+                    Expery real sta lawyes
+                </div>
+                <div class="flex gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 13.8l-2.15-2.15q-.275-.275-.7-.275t-.7.275t-.275.7t.275.7L9.9 15.9q.3.3.7.3t.7-.3l5.65-5.65q.275-.275.275-.7t-.275-.7t-.7-.275t-.7.275zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/></svg>
+                    Expery real sta lawyes
+                </div>
+            </div>
+            <div class="flex gap-2 items-center bg-white w-[320px] rounded-xl px-4 py-2 mt-10">
+                <svg class=" rounded-full p-2 border-2" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="-2 -2 24 24"><path fill="#eab308" d="M4.376 8.068A5.944 5.944 0 0 0 4.056 10c0 .734.132 1.437.376 2.086a5.946 5.946 0 0 0 8.57 3.045h.001a5.96 5.96 0 0 0 2.564-3.043H10.22V8.132h9.605a10.019 10.019 0 0 1-.044 3.956a9.998 9.998 0 0 1-3.52 5.71A9.958 9.958 0 0 1 10 20A9.998 9.998 0 0 1 1.118 5.401A9.998 9.998 0 0 1 10 0c2.426 0 4.651.864 6.383 2.302l-3.24 2.652a5.948 5.948 0 0 0-8.767 3.114"/></svg>
+                <div class="flex flex-col gap-1">
+                    <div class="flex gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 17.275l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15z"/></svg>
+                    </div>
+                    Read oru reiwews
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#666666" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z"/></svg>
+            </div>
+        </div>
+        <div class="flex justify-center items-center bg-primary-200 lg:p-0 p-10">
+            <img class=" w-full  lg:h-[80%] lg:w-[80%] object-cover lg:mr-[30%]" src="https://dinahosting.com/blog/upload/2023/04/lenguajes-de-programacion-2023.jpg" alt="">
+        </div>
+</main>
+<section class=" py-20 bg-white text-center text-texto-900 lg:px-40 px-10">
+        <h1 class=" mt-10 text-2xl font-bold">Rela estate la eade simple</h1>
+        <span class=" my-10 pt-4">Forget the 50 e,ail and laryer office visits</span>
+        <div class=" grid grid-cols-1 mt-10 lg:grid-cols-3  gap-4">
+            <div class="card items-center rounded-lg shadow-lg border-2 p-4 text-center justify-center flex flex-col gap-2">
+                <div class="rounded-full bg-[#fddbda] h-[60px] flex items-center justify-center w-[60px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea4343" d="M12 10q1.25 0 2.125-.875T15 7t-.875-2.125T12 4t-2.125.875T9 7t.875 2.125T12 10m.025 12.625q-.2 0-.375-.062t-.325-.188l-2.575-2.25q-.15-.125-.238-.288t-.112-.362t.038-.387t.187-.338L10 17l-1.3-1.3q-.15-.15-.213-.325T8.426 15t.062-.375t.213-.325L10 13v-.35q-1.8-.625-2.9-2.175T6 7q0-2.5 1.75-4.25T12 1t4.25 1.75T18 7q0 2.025-1.15 3.538T14 12.65v7.95q0 .2-.075.388t-.225.337l-1.025 1.025q-.125.125-.288.2t-.362.075"/></svg>
+                </div>
+                <h1 class=" text-xl font-semibold mt-6">Properyy closing</h1>
+                <span>Lorem, ipsum dolor sit amet cons pa rum, reprehend  magnam quasi quidem cumqu</span>
+            </div>
+            <div class="card rounded-lg shadow-lg border-2 p-4 text-center flex flex-col gap-2 items-center">
+                <div class="rounded-full bg-[#e3d7fb]  h-[60px] flex items-center justify-center w-[60px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#7c42ed" d="M12 10q1.25 0 2.125-.875T15 7t-.875-2.125T12 4t-2.125.875T9 7t.875 2.125T12 10m.025 12.625q-.2 0-.375-.062t-.325-.188l-2.575-2.25q-.15-.125-.238-.288t-.112-.362t.038-.387t.187-.338L10 17l-1.3-1.3q-.15-.15-.213-.325T8.426 15t.062-.375t.213-.325L10 13v-.35q-1.8-.625-2.9-2.175T6 7q0-2.5 1.75-4.25T12 1t4.25 1.75T18 7q0 2.025-1.15 3.538T14 12.65v7.95q0 .2-.075.388t-.225.337l-1.025 1.025q-.125.125-.288.2t-.362.075"/></svg>              
+                </div>
+                <h1 class=" text-xl font-semibold mt-6">Properyy closing</h1>
+                <span>Lorem, ipsum dolor sit amet cons pa rum, reprehend  magnam quasi quidem cumqu</span>
+            </div>
+            <div class="card rounded-lg shadow-lg border-2 p-4 text-center flex items-center flex-col gap-2">
+                <div class="rounded-full bg-[#d9e2fc]  h-[60px] flex items-center justify-center w-[60px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#3471fb" d="M12 10q1.25 0 2.125-.875T15 7t-.875-2.125T12 4t-2.125.875T9 7t.875 2.125T12 10m.025 12.625q-.2 0-.375-.062t-.325-.188l-2.575-2.25q-.15-.125-.238-.288t-.112-.362t.038-.387t.187-.338L10 17l-1.3-1.3q-.15-.15-.213-.325T8.426 15t.062-.375t.213-.325L10 13v-.35q-1.8-.625-2.9-2.175T6 7q0-2.5 1.75-4.25T12 1t4.25 1.75T18 7q0 2.025-1.15 3.538T14 12.65v7.95q0 .2-.075.388t-.225.337l-1.025 1.025q-.125.125-.288.2t-.362.075"/></svg>              
+                </div>
+                <h1 class=" text-xl font-semibold mt-6">Properyy closing</h1>
+                <span>Lorem, ipsum dolor sit amet cons pa rum, reprehend  magnam quasi quidem cumqu</span>
+            </div>
+        </div>
+</section>
+<section class=" lg:px-40 px-10 grid lg:grid-cols-3 lg:py-20 py-10 md:grid-cols-2 grid-cols-1 gap-10">
+    <div class="img col-span-1  bg-primary-100">
+        <img class=" absolute mt-32 rounded-xl w-40" src="https://img.freepik.com/fotos-premium/imagen-feliz-joven-triunfando-sintiendose-campeon-ganando-gritando-alegria-pie-sobre-fondo-blanco_1258-78165.jpg" alt="">
+        <img class=" mt-6 pl-20 h-96 object-cover" src="https://st3.depositphotos.com/3776273/31936/i/450/depositphotos_319362956-stock-photo-man-pointing-showing-copy-space.jpg" alt="">
+    </div>
+    <div class="flex flex-col md:col-span-1 gap-4 lg:col-span-2">
+        <h1 class=" text-3xl font-bold"> Work wifh epert real estate laters to <span class=" ring-texto-200"> seal the deal</span></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis magnam facere quos quia labore temporibus, exercitationem tempore itaque dolor provident consequatur repellat in aut ratione aperiam min</p>
+        <div [ngClass]="{'active':activeCard}" class="card p-6 rounded-xl border-2 ">
+            <div class="flex justify-between">
+                <h1 class=" text-lg font-semibold text-texto-900">Get support on your terms</h1>
+              <button (click)="toggleCard()" >
+                @if(activeCard){
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#000000" d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z"/></svg>
+                }@else{
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#000000" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+                }
+              </button>
+            </div>
+            @if(activeCard){
+              <div class=" mt-2 max-w-[90%]">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio hic exercitationem sapiente ut eius fugiat perferendis non illum porro velit, blanditiis dolores accusantium. Nisi exercitationem, pariatur assumenda vitae q
+              </div>
+            }
+        </div>
+        <div [ngClass]="{'active':activeCard}" class="card p-6 rounded-xl border-2 ">
+            <div class="flex justify-between">
+                <h1 class=" text-lg font-semibold text-texto-900">Get support on your terms</h1>
+              <button (click)="toggleCard()" >
+                @if(activeCard){
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#000000" d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z"/></svg>
+                }@else{
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#000000" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+                }
+              </button>
+            </div>
+            @if(activeCard){
+              <div class=" mt-2 max-w-[90%]">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio hic exercitationem sapiente ut eius fugiat perferendis non illum porro velit, blanditiis dolores accusantium. Nisi exercitationem, pariatur assumenda vitae q
+              </div>
+            }
+        </div>
+    </div>
+</section>
+<section class=" lg:p-20 p-10 bg-primary-200">
+    <div class="flex flex-col bg-white rounded-lg  py-10 px-6">
+        <h1 class=" text-2xl font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sim</h1>
+        <table class="w-full border-collapse">
+            <thead>
+                <tr>
+                    <th class="text-left p-4 border-b border-gray-200">Closing process</th>
+                    <th class="text-center p-4 border-b border-gray-200">Doormat</th>
+                    <th class="text-center p-4 border-b border-gray-200">Traditional Real Estate Lawyer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="p-4 border-b border-gray-200">Access to personal closing dashboard</td>
+                    <td class="text-center p-4 border-b bg-[#ecfdf3] w-auto border-gray-200">✅</td>
+                    <td class="text-center p-4 border-b border-gray-200">❌</td>
+                </tr>
+                <tr>
+                    <td class="p-4 border-b border-gray-200">Meet your closing team before your signing meeting</td>
+                    <td class="text-center p-4 border-b bg-[#ecfdf3] w-auto border-gray-200">✅</td>
+                    <td class="text-center p-4 border-b border-gray-200">❔</td>
+                </tr>
+                <tr>
+                    <td class="p-4 border-b border-gray-200">Track and complete tasks in online dashboard</td>
+                    <td class="text-center p-4 border-b bg-[#ecfdf3] w-auto border-gray-200">✅</td>
+                    <td class="text-center p-4 border-b border-gray-200">❌</td>
+                </tr>
+                <tr>
+                    <td class="p-4 border-b border-gray-200">Have a video call to sign documents from anywhere</td>
+                    <td class="text-center p-4 border-b bg-[#ecfdf3] w-auto border-gray-200">✅</td>
+                    <td class="text-center p-4 border-b border-gray-200">❔</td>
+                </tr>
+                <tr>
+                    <td class="p-4 border-b border-gray-200">Track your closing day progress in real time</td>
+                    <td class="text-center p-4 border-b bg-[#ecfdf3] w-auto border-gray-200">✅</td>
+                    <td class="text-center p-4 border-b border-gray-200">❌</td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th class="text-left p-4 border-b border-gray-200">Support</th>
+                    <th class="text-center p-4 border-b bg-[#ecfdf3] w-auto border-gray-200"></th>
+                    <th class="text-center p-4 border-b border-gray-200"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="p-4 border-b border-gray-200">Get support by phone, text, chat, and email</td>
+                    <td class="text-center p-4 border-b bg-[#ecfdf3] w-auto border-gray-200">✅</td>
+                    <td class="text-center p-4 border-b border-gray-200">❔</td>
+                </tr>
+                <tr>
+                    <td class="p-4 border-b border-gray-200">Reach out after work and actually get an answer</td>
+                    <td class="text-center p-4 border-b bg-[#ecfdf3] w-auto border-gray-200">✅</td>
+                    <td class="text-center p-4 border-b border-gray-200">❌</td>
+                </tr>
+                <tr>
+                    <td class="p-4 border-b border-gray-200">Access detailed help centre articles</td>
+                    <td class="text-center p-4 border-b bg-[#ecfdf3] w-auto border-gray-200">✅</td>
+                    <td class="text-center p-4 border-b border-gray-200">❌</td>
+                </tr>
+                <tr>
+                    <td class="p-4 border-b border-gray-200">Receive notifications for key moments in your transaction</td>
+                    <td class="text-center p-4 border-b bg-[#ecfdf3] w-auto border-gray-200">✅</td>
+                    <td class="text-center p-4 border-b border-gray-200">❌</td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th class="text-left p-4 border-b border-gray-200">Pricing</th>
+                    <th class="text-center p-4 border-b bg-[#ecfdf3] w-auto border-gray-200"></th>
+                    <th class="text-center p-4 border-b border-gray-200"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="p-4 border-b border-gray-200">Get upfront pricing that won't change</td>
+                    <td class="text-center p-4 border-b bg-[#ecfdf3] w-auto border-gray-200">✅</td>
+                    <td class="text-center p-4 border-b border-gray-200">❔</td>
+                </tr>
+                <tr>
+                    <td class="p-4 border-b border-gray-200">Don't pay for extra touchpoints with your closing team</td>
+                    <td class="text-center p-4 border-b bg-[#ecfdf3] w-auto border-gray-200">✅</td>
+                    <td class="text-center p-4 border-b border-gray-200">❌</td>
+                </tr>
+                <tr>
+                    <td class="p-4 border-b border-gray-200">Pay a fair market price, no more</td>
+                    <td class="text-center p-4 border-b bg-[#ecfdf3] w-auto border-gray-200">✅</td>
+                    <td class="text-center p-4 border-b border-gray-200">❌</td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th class="text-left p-4 border-b border-gray-200">And more</th>
+                    <th class="text-center p-4 border-b bg-[#ecfdf3] w-auto border-gray-200"></th>
+                    <th class="text-center p-4 border-b border-gray-200"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="p-4 border-b border-gray-200">Get exclusive deals from great brands</td>
+                    <td class="text-center p-4 border-b bg-[#ecfdf3] w-auto border-gray-200">✅</td>
+                    <td class="text-center p-4 border-b border-gray-200">❌</td>
+                </tr>
+                <tr>
+                    <td class="p-4 border-b border-gray-200">Access all closing information in one location at anytime</td>
+                    <td class="text-center p-4 border-b bg-[#ecfdf3] w-auto border-gray-200">✅</td>
+                    <td class="text-center p-4 border-b border-gray-200">❌</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<section class=" lg:h-screen grid items-center  lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+    <div class="flex  lg:px-40 px-10 flex-col   lg:my-0 my-20 gap-4 lg:col-span-2">
+        <h1 class=" text-3xl font-bold"> Work wifh epert real estate laters to <span class=" ring-texto-200"> seal the deal</span></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis magnam facere quos quia labore temporibus, exercitationem tempore itaque dolor provident consequatur repellat in aut ratione aperiam min</p>
+        <div [ngClass]="{'active':activeCard}" class="card p-6 rounded-xl border-2 ">
+            <div class="flex justify-between">
+                <h1 class=" text-lg font-semibold text-texto-900">Get support on your terms</h1>
+              <button (click)="toggleCard()" >
+                @if(activeCard){
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#000000" d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z"/></svg>
+                }@else{
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#000000" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+                }
+              </button>
+            </div>
+            @if(activeCard){
+              <div class=" mt-2 max-w-[90%]">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio hic exercitationem sapiente ut eius fugiat perferendis non illum porro velit, blanditiis dolores accusantium. Nisi exercitationem, pariatur assumenda vitae q
+              </div>
+            }
+        </div>
+        <div [ngClass]="{'active':activeCard}" class="card p-6 rounded-xl border-2 ">
+            <div class="flex justify-between">
+                <h1 class=" text-lg font-semibold text-texto-900">Get support on your terms</h1>
+              <button (click)="toggleCard()" >
+                @if(activeCard){
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#000000" d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z"/></svg>
+                }@else{
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#000000" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+                }
+              </button>
+            </div>
+            @if(activeCard){
+              <div class=" mt-2 max-w-[90%]">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio hic exercitationem sapiente ut eius fugiat perferendis non illum porro velit, blanditiis dolores accusantium. Nisi exercitationem, pariatur assumenda vitae q
+              </div>
+            }
+        </div>
+    </div>
+    <div class="   bg-[#fff4e6] lg:px-40 px-10 h-screen flex items-center">
+        <div class="w-80 lg:absolute lg:right-[20%] mt-10 bg-slate-200 rounded-2xl shadow-lg  ">
+            <div class="flex justify-between items-center p-6 bg-white rounded-t-2xl">
+                <h1 class="text-xl font-bold">Doormat</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#000000"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+            </div>
+            <div class="w-full bg-white">
+                <span class="  w-full p-6">545 jiogEYjoijróprisnikhR</span>
+
+            </div>
+            <div class="mt-4">
+                <h2 class="text-lg font-semibold py-6  px-6   ">Transactions status</h2>
+            </div>
+            <div class="bg-white px-6 rounded-2xl pt-6 pb-10 z-50 flex-col gap-4 ">
+                <img src="https://github.com/hearelmer.png" class=" rounded-full h-20 w-20" alt="">
+                <div class="flex gap-2">
+                    <h1 class=" text-lg font-bold">Status</h1>
+                    <button class=" bg-[#ecfdf3] text-green-400 rounded-full px-6 "> completed</button>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <h1 class=" text-lg font-bold">Status</h1>
+                    <span>Wed djij i </span>
+
+                </div>
+                <div class="flex flex-col gap-1">
+                    <h1 class=" text-lg font-bold">Status</h1>
+                    <span>Wed djij i </span>
+
+                </div>
+                <div class="flex flex-col gap-1">
+                    <h1 class=" text-lg font-bold">Status</h1>
+                    <span>Wed djij i </span>
+
+                </div>
+                <div class="flex flex-col gap-1 border-t-2 pt-4 mt-4">
+                    <h1 class=" text-lg font-bold">Downlaod your project</h1>
+                    <span>Lorem ipsum ero dicta, doloribus quos   iure magnam eius, aliquid pariatur accusamus ipsam sa</span>
+                    <button class=" bg-texto-100 text-white w-full mt-4 py-2 rounded-xl">Download documents</button>
+                </div>
+
+            </div>
+        </div>
+ 
+    </div>
+</section>
+<section class=" lg:px-40 px-10 grid grid-cols-1 gap-4 lg:grid-cols-2 py-20 bg-primary-100">
+  <div class="flex flex-col ">
+    <h1 class=" text-texto-200 font-bold text-2xl">Nor surprises</h1>
+    <h1 class=" text-texto-900 font-bold text-3xl">Fair and trnspaorent privid fay one</h1>
+    <p class=" py-8">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit velit quibusdam aliquid reprehenderit recusandae illo quas atque consequatur cupiditate voluptatibus? Aliquam nisi deserunt tempore quae, amet inventore aliquid mollitia hic.
+    </p>
+    <button class=" rounded-lg w-96 bg-texto-100 py-2 px-6 text-white">View our pricing in detail</button>
+    <span class=" mt-10 font-light">Allp rices are sibject to hst</span>
+  </div>
+  <div class="flex flex-col  gap-2 py-24  ">
+    <div class="item px-6 rounded-xl bg-white w-[90%] py-2 flex items-center gap-3">
+        <div class="rounded-full bg-[#fddbda] h-[60px] flex items-center justify-center w-[60px]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea4343" d="M12 10q1.25 0 2.125-.875T15 7t-.875-2.125T12 4t-2.125.875T9 7t.875 2.125T12 10m.025 12.625q-.2 0-.375-.062t-.325-.188l-2.575-2.25q-.15-.125-.238-.288t-.112-.362t.038-.387t.187-.338L10 17l-1.3-1.3q-.15-.15-.213-.325T8.426 15t.062-.375t.213-.325L10 13v-.35q-1.8-.625-2.9-2.175T6 7q0-2.5 1.75-4.25T12 1t4.25 1.75T18 7q0 2.025-1.15 3.538T14 12.65v7.95q0 .2-.075.388t-.225.337l-1.025 1.025q-.125.125-.288.2t-.362.075"/></svg>
+        </div>
+        <h1 class=" text-lg font-semibold">proepety clsoin</h1>
+        <h1 class=" text-xl ml-2 font-semibold">$979</h1>
+    </div>
+    <div class="flex flex-col gap-4 rounded-xl bg-white px-6 py-2">
+        <div class="item  flex items-center gap-3">
+            <div class="rounded-full bg-[#fddbda] h-[60px] flex items-center justify-center w-[60px]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea4343" d="M12 10q1.25 0 2.125-.875T15 7t-.875-2.125T12 4t-2.125.875T9 7t.875 2.125T12 10m.025 12.625q-.2 0-.375-.062t-.325-.188l-2.575-2.25q-.15-.125-.238-.288t-.112-.362t.038-.387t.187-.338L10 17l-1.3-1.3q-.15-.15-.213-.325T8.426 15t.062-.375t.213-.325L10 13v-.35q-1.8-.625-2.9-2.175T6 7q0-2.5 1.75-4.25T12 1t4.25 1.75T18 7q0 2.025-1.15 3.538T14 12.65v7.95q0 .2-.075.388t-.225.337l-1.025 1.025q-.125.125-.288.2t-.362.075"/></svg>
+            </div>
+            <h1 class=" text-lg font-semibold">proepety clsoin</h1>
+            <h1 class=" text-xl ml-2 font-semibold">$979</h1>
+        </div>
+        <div class="grid  w-full grid-cols-3">
+            <div class="flex flex-col gap-1 border-r-2 ">
+                <h1>Paychase</h1>
+                <span class=" text-xl font-bold">$979</span>
+            </div>
+            <div class="flex flex-col gap-1 border-l-2">
+                <h1>Paychase</h1>
+                <span class=" text-xl font-bold">$979</span>
+            </div>
+            <div class="flex flex-col gap-1  ">
+                <h1>Paychase</h1>
+                <span class=" text-xl font-bold">$979</span>
+            </div>
+        </div>
+    </div>
+    <div class="item px-6 rounded-xl bg-white ml-20  py-2 flex items-center gap-3">
+        <div class="rounded-full bg-[#fddbda] h-[60px] flex items-center justify-center w-[60px]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea4343" d="M12 10q1.25 0 2.125-.875T15 7t-.875-2.125T12 4t-2.125.875T9 7t.875 2.125T12 10m.025 12.625q-.2 0-.375-.062t-.325-.188l-2.575-2.25q-.15-.125-.238-.288t-.112-.362t.038-.387t.187-.338L10 17l-1.3-1.3q-.15-.15-.213-.325T8.426 15t.062-.375t.213-.325L10 13v-.35q-1.8-.625-2.9-2.175T6 7q0-2.5 1.75-4.25T12 1t4.25 1.75T18 7q0 2.025-1.15 3.538T14 12.65v7.95q0 .2-.075.388t-.225.337l-1.025 1.025q-.125.125-.288.2t-.362.075"/></svg>
+        </div>
+        <h1 class=" text-lg font-semibold">proepety clsoin</h1>
+        <h1 class=" text-xl ml-2 font-semibold">$979</h1>
+    </div> 
+  </div>
+</section>
+<section class=" w-full bg-white lg:p-20 gap-10 p-10">
+    <h1 class=" text-3xl font-bold">Get <span class=" text-texto-200">exclusive acces</span> to deals to help wifth your move and setup your home</h1>
+    <span class=" mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quibusdam est velit fugiat iusto consequuntur earum eveniet, adipisci ullam harum recusandae quo, tenetur omn</span>
+    <div class="flex gap-6 justify-center flex-wrap w-full mt-10">
+        <img class=" h-10" src="https://blog.hubspot.es/hs-fs/hubfs/ES%20Blog%20images/Los%2015%20logos%20m%C3%A1s%20creativos%20e%20inspiradores%20del%20mundo/logo_creativo_coca_cola.png?width=650&name=logo_creativo_coca_cola.png" alt="">
+        <img class=" h-10" src="https://blog.hubspot.es/hs-fs/hubfs/ES%20Blog%20images/Los%2015%20logos%20m%C3%A1s%20creativos%20e%20inspiradores%20del%20mundo/logo_creativo_coca_cola.png?width=650&name=logo_creativo_coca_cola.png" alt="">
+        <img class=" h-10" src="https://blog.hubspot.es/hs-fs/hubfs/ES%20Blog%20images/Los%2015%20logos%20m%C3%A1s%20creativos%20e%20inspiradores%20del%20mundo/logo_creativo_coca_cola.png?width=650&name=logo_creativo_coca_cola.png" alt="">
+        <img class=" h-10" src="https://blog.hubspot.es/hs-fs/hubfs/ES%20Blog%20images/Los%2015%20logos%20m%C3%A1s%20creativos%20e%20inspiradores%20del%20mundo/logo_creativo_coca_cola.png?width=650&name=logo_creativo_coca_cola.png" alt="">
+        <img class=" h-10" src="https://blog.hubspot.es/hs-fs/hubfs/ES%20Blog%20images/Los%2015%20logos%20m%C3%A1s%20creativos%20e%20inspiradores%20del%20mundo/logo_creativo_coca_cola.png?width=650&name=logo_creativo_coca_cola.png" alt="">
+        <img class=" h-10" src="https://blog.hubspot.es/hs-fs/hubfs/ES%20Blog%20images/Los%2015%20logos%20m%C3%A1s%20creativos%20e%20inspiradores%20del%20mundo/logo_creativo_coca_cola.png?width=650&name=logo_creativo_coca_cola.png" alt="">
+        <img class=" h-10" src="https://blog.hubspot.es/hs-fs/hubfs/ES%20Blog%20images/Los%2015%20logos%20m%C3%A1s%20creativos%20e%20inspiradores%20del%20mundo/logo_creativo_coca_cola.png?width=650&name=logo_creativo_coca_cola.png" alt="">
+        <img class=" h-10" src="https://blog.hubspot.es/hs-fs/hubfs/ES%20Blog%20images/Los%2015%20logos%20m%C3%A1s%20creativos%20e%20inspiradores%20del%20mundo/logo_creativo_coca_cola.png?width=650&name=logo_creativo_coca_cola.png" alt="">
+        <img class=" h-10" src="https://blog.hubspot.es/hs-fs/hubfs/ES%20Blog%20images/Los%2015%20logos%20m%C3%A1s%20creativos%20e%20inspiradores%20del%20mundo/logo_creativo_coca_cola.png?width=650&name=logo_creativo_coca_cola.png" alt="">
+        <img class=" h-10" src="https://blog.hubspot.es/hs-fs/hubfs/ES%20Blog%20images/Los%2015%20logos%20m%C3%A1s%20creativos%20e%20inspiradores%20del%20mundo/logo_creativo_coca_cola.png?width=650&name=logo_creativo_coca_cola.png" alt="">
+        <img class=" h-10" src="https://blog.hubspot.es/hs-fs/hubfs/ES%20Blog%20images/Los%2015%20logos%20m%C3%A1s%20creativos%20e%20inspiradores%20del%20mundo/logo_creativo_coca_cola.png?width=650&name=logo_creativo_coca_cola.png" alt="">
+        <img class=" h-10" src="https://blog.hubspot.es/hs-fs/hubfs/ES%20Blog%20images/Los%2015%20logos%20m%C3%A1s%20creativos%20e%20inspiradores%20del%20mundo/logo_creativo_coca_cola.png?width=650&name=logo_creativo_coca_cola.png" alt="">
+    </div>
+</section>
+<section class=" px-20 lg:px-60 flex flex-col bg-primary-100 py-20 justify-center">
+    <h1 class=" text-3xl font-bold text-center lg:mb-20 mb-10">What or clients are saying about us</h1>
+    <div class="flex lg:flex-row flex-col gap-4">
+        <img class=" rounded-lg shadow-lg    lg:w-[55%] object-cover" src="data:image/jpeg;base64,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" alt="">
+        <div class=" flex flex-col p-4 bg-white mt-16 h-auto lg:w-[45%] rounded-lg gap-4">
+            <div class="flex justify-between">
+              <div class="flex flex-col gap-1">
+                <h1 class=" text-lg font-semibold">Just fanstastic</h1>
+                <div class="flex gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                </div>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><path fill="#ea580c" d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301c1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/></svg>
+            </div>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa laudantium nobis incidunt? Molestiae voluptatem veritatis cupiditate consequatur ratione, sit a at id adipisci! Non tempora, enim earum ea hic adipisci!
+            </p>
+            <h1 class=" font-semibold">Jason Hall</h1>
+            <span class=" mt-2">Tronto - ajnaury 2023</span>
+        </div>
+    </div>
+    <div class="flex flex-col lg:flex-row gap-4 mt-4">
+        <div class=" flex flex-col p-4 bg-white lg:w-[50%] rounded-lg gap-4">
+            <div class="flex justify-between">
+              <div class="flex flex-col gap-1">
+                <h1 class=" text-lg font-semibold">Just fanstastic</h1>
+                <div class="flex gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                </div>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><path fill="#ea580c" d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301c1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/></svg>
+            </div>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa laudantium nobis incidunt? Molestiae voluptatem veritatis cupiditate consequatur ratione, sit a at id adipisci! Non tempora, enim earum ea hic adipisci!
+            </p>
+            <h1 class=" font-semibold">Jason Hall</h1>
+            <span class=" mt-2">Tronto - ajnaury 2023</span>
+        </div>
+        <div class=" flex  flex-col   mb-20 p-4 bg-white lg:w-[50%] rounded-lg gap-4">
+            <div class="flex justify-between">
+              <div class="flex flex-col gap-1">
+                <h1 class=" text-lg font-semibold">Just fanstastic</h1>
+                <div class="flex gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ea580c" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                </div>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><path fill="#ea580c" d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301c1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/></svg>
+            </div>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa laudantium nobis incidunt? Molestiae voluptatem veritatis cupiditate consequatur ratione, sit a at id adipisci! Non tempora, enim earum ea hic adipisci!
+            </p>
+            <h1 class=" font-semibold">Jason Hall</h1>
+            <span class=" mt-2">Tronto - ajnaury 2023</span>
+        </div>
+    </div>
+</section>
+<section class=" p-10 lg:py-20 lg:px-40 grid grid-cols-1 lg:grid-cols-2">
+    <div class="flex flex-col gap-6">
+        <h1 class=" text-3xl font-bold max-w-96 text-wrap">Frwuently asked questions</h1>
+        <span>Hvae ,pre questionss</span>
+
+        <button class=" w-96 rounded-xl px-6 py-2 bg-texto-100 text-white">ee motr Faqa</button>
+    </div>
+    <div class="flex">
+        <div class="max-w-2xl mx-auto p-6">
+            <div class="border-b">
+                <button class="flex justify-between w-full py-4 text-left text-lg font-semibold focus:outline-none">
+                    Do actual lawyers work for Doormat?
+                    <span class="ml-2 text-orange-500">+</span>
+                </button>
+            </div>
+            <div class="border-b">
+                <button class="flex justify-between w-full py-4 text-left text-lg font-semibold focus:outline-none">
+                    Is a lawyer required to close on a property?
+                    <span class="ml-2 text-orange-500">-</span>
+                </button>
+                <div class="mt-2 px-4 text-gray-700">
+                    <p>Yes. A lawyer is required on both sides of a property transaction (i.e. for both the buyer and seller) in Ontario. There are aspects of every property closing that require lawyer involvement and there are other aspects that do not. At Doormat, we have combined the efforts of our lawyers and support team to provide you with the best property closing experience possible.</p>
+                </div>
+            </div>
+            <div class="border-b">
+                <button class="flex justify-between w-full py-4 text-left text-lg font-semibold focus:outline-none">
+                    What locations does Doormat serve?
+                    <span class="ml-2 text-orange-500">+</span>
+                </button>
+            </div>
+            <div class="border-b">
+                <button class="flex justify-between w-full py-4 text-left text-lg font-semibold focus:outline-none">
+                    What services does Doormat provide?
+                    <span class="ml-2 text-orange-500">+</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class=" h-80 border-b-2  border-slate-400 text-center bg-texto-900 pt-20 flex flex-col items-center">
+    <h1 class=" text-center text-2xl text-white font-semibold">Your proyect property clsing dosen't need </h1>
+    <span class=" text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat sint velit sapiente incidunt est similique, aut explicabo, ipsum fugiat labore cum iste, eveniet magni at! Eaque magnam sunt perspiciatis nostrum.</span>
+    <button class=" rounded-xl bg-texto-100 py-2 px-4 text-white font-semibold">Get started</button>
+</section>
+<section class=" grid grid-cols-1 gap-10 bg-texto-900 text-white lg:grid-cols-4 py-20  px-10 lg:px-40">
+    <div class="flex flex-col">
+        <h1 class=" text-xl font-bold text-white">Doormat</h1>
+        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas eius accusantium omnis ratione praesentium dolores voluptatum aspernatur, necessitatibus, quas minus repellat vitae doloribus cu</span>
+        <span class=" mt-2">+124849558</span>
+        <span class="mt-1">supprotldomain</span>
+    </div>
+    <div class="flex flex-col gap-3">
+        <h1 class=" text-xl font-bold text-white">Our comapny</h1>
+        <span>About us</span>
+        <span>Conatct us</span>
+        <span>Anoouncements</span>
+    </div>
+    <div class="flex flex-col gap-3">
+        <h1 class=" text-xl font-bold text-white">Our comapny</h1>
+        <span>About us</span>
+        <span>Conatct us</span>
+        <span>Anoouncements</span>
+    </div>
+    <div class="flex flex-col gap-3">
+        <h1 class=" text-xl font-bold text-white">Our comapny</h1>
+        <span>About us</span>
+        <span>Conatct us</span>
+        <span>Anoouncements</span>
+    </div>
+</section>
+<section class=" border-y-1    border-slate-500">
+    <h1 class=" text-xl py-6 lg:px-40 px-10 font-semibold bg-texto-900 text-white">aDITONAL Resources</h1>
+</section>
+<section class=" border    border-slate-400">
+    <h1 class=" text-xl py-6 lg:px-40 px-10  last: bg-texto-900 text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum porro, facere explicabo corrupti molestiae error quaerat aut consequuntur iusto voluptate minus repudiandae odit culpa laboriosam necessitatibus ad. Iusto, porro quaerat!</h1>
+</section>
+<section class=" flex justify-between  px-10 lg:px-40 text-white bg-texto-900 ">
+    <div class="flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 72 72"><path fill="#fff" d="M5 17h62v38H5z"/><path fill="#d22f27" d="M5 17h17v38H5zm45 0h17v38H50z"/><path fill="#d22f27" stroke="#d22f27" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36 46v-5m0 0h6.8l-.8-2l4-4v-3h-3l-4 4v-7l-3-3m0 15h-6.8l.8-2l-4-4v-3h3l4 4v-7l3-3"/><path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 17h62v38H5z"/></svg>
+    </div>
+    <div class="flex items-center gap-2">
+<span>leagl ocuments</span>
+<span>2024</span>
+    </div>
+</section>
